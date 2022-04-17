@@ -1,0 +1,12 @@
+#!name=KuWo
+#!desc=KuWoMusic Vip and Download
+#!system=ios
+
+[URL Rewrite]
+^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+  http://musicpay.kuwo.cn/music.pay?uid=2 302
+
+[MITM]
+hostname = %APPEND% musicpay.kuwo.cn, vip1.kuwo.cn
+
+[Script]
+KuWoMusicVip = type=http-response,pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice),requires-body=1,max-size=0,script-path=https://github.com/NobyDa/Script/raw/master/Surge/JS/Kuwo.js,script-update-interval=0
