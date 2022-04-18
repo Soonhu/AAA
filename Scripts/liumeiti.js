@@ -1,3 +1,33 @@
+/**
+ * @author Helge_0x00
+ *
+ * [Panel]
+ * disney_check = script-name=disney_check,title=Disney+ 解锁检测,style=alert,content=请刷新面板,update-interval=1800
+ *
+ * [Script]
+ * disney_check = type=generic,script-path=https://gist.githubusercontent.com/Hyseen/729fc4c3ac28c3f2e7c4a832d81780f3/raw/disney_check.js
+ *
+ * 支持使用脚本使用 argument 参数自定义配置，如：argument=key1=URLEncode(value1)&key2=URLEncode(value2)，具体参数如下所示，
+ * title: 面板标题
+ * availableContent: 解锁时展示的的文本内容，支持以下四个个区域占位符 #REGION_FLAG#、#REGION_CODE#、#REGION_NAME#、#REGION_NAME_EN#，用来展示地区国旗 emoji 、地区编码、地区中文名称、地区英文名称
+ * availableIcon: 解锁时展示的图标，内容为任意有效的 SF Symbol Name
+ * availableIconColor:  解锁时展示的图标颜色，内容为颜色的 HEX 编码
+ * availableStyle: 解锁时展示的图标样式，参数可选值有 good, info, alert, error
+ * comingContent: 计划上线展示的的文本内容，支持以下四个个区域占位符 #REGION_FLAG#、#REGION_CODE#、#REGION_NAME#、#REGION_NAME_EN#，用来展示地区国旗 emoji 、地区编码、地区中文名称、地区英文名称
+ * comingIcon: 计划上线展示的图标，内容为任意有效的 SF Symbol Name
+ * comingIconColor:  计划上线展示的图标颜色，内容为颜色的 HEX 编码
+ * comingStyle: 计划上线展示的图标样式，参数可选值有 good, info, alert, error
+ * notAvailableContent: 不支持解锁时展示的文本内容
+ * notAvailableIcon: 不支持解锁时展示的图标
+ * notAvailableIconColor: 不支持解锁时展示的图标颜色
+ * notAvailableStyle: 不支持解锁时展示的图标样式
+ * errorContent: 检测异常时展示的文本内容
+ * errorIcon: 检测异常时展示的图标
+ * errorIconColor: 检测异常时展示的图标颜色
+ * errorStyle: 检测异常时展示的图标样式
+ * timeout: 超时时间，毫秒，默认为 3000
+ */
+
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36'
 
 // 即将登陆
