@@ -1,13 +1,6 @@
 #!name=合集
 #!desc=𝐔𝐩𝐝𝐚𝐭𝐞: 2022.04.17
 
-[URL Rewrite]
-# > TikTok换区
-(更换307前面JP JP=日本 KR=韩国 HK=香港 US=美国）
-(?<=&mcc_mnc=)4 2 307
-(?<=_region=)CN(?=&) JP 307
-(^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
-^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
 [Header Rewrite]
 
 # Safari 禁止百度跳转至 App
@@ -29,4 +22,4 @@
 微博广告 = type=http-response,requires-body=1,max-size=-1,pattern=^https?://m?api\.weibo\.c(n|om)/2/(statuses/(unread|extend|positives/get|(friends|video)(/|_)(mix)?timeline)|stories/(video_stream|home_list)|(groups|fangle)/timeline|profile/statuses|comments/build_comments|photo/recommend_list|service/picfeed|searchall|cardlist|page|!/photos/pic_recommend_status|video/tiny_stream_video_list),script-path=https://raw.githubusercontent.com/yichahucha/surge/master/wb_ad.js
 
 [MITM]
-hostname =  %INSERT% -*.amemv.com, -*.snssdk.com,pan.baidu.com,spclient.wg.spotify.com,vip1.kuwo.cn,*.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com,security.wechat.com,api.polaxiong.com,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com
+hostname =  %INSERT% -*.amemv.com, -*.snssdk.com,pan.baidu.com,spclient.wg.spotify.com,vip1.kuwo.cn,security.wechat.com,api.polaxiong.com,api.weibo.cn,mapi.weibo.com,*.uve.weibo.com
