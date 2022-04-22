@@ -1,5 +1,5 @@
 var list = ["中国","安阳","郑州","大理","上海"];
-const url = "https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5";
+const url = "https://news.qq.com/zt2020/page/feiyan.htm#/";
 var ala="";
 function nowtime(){
  let now = new Date();
