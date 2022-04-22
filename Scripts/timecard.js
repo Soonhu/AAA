@@ -77,13 +77,13 @@ function datenotice() {
 //>图标依次切换乌龟、兔子、闹钟、礼品盒
 function icon_now(num){
   if(num<=7 && num>3 ){
-    return "hare"
+    return "tortoise"
   }else if(num<=3 && num>0){
     return "timer"
   }else if(num==0){
     return "gift"
   }else{
-    return "tortoise"
+    return "hare"
   }
 }
 
