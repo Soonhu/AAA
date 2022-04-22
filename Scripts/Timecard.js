@@ -13,6 +13,7 @@ var tlist = {
   12: ["春节", "2023-01-22"],
   13: ["元宵", "2023-02-05"]
 };
+
 let tnow = new Date();
 let tnowf =
   tnow.getFullYear() + "-" + (tnow.getMonth() + 1) + "-" + tnow.getDate();
@@ -71,6 +72,8 @@ function datenotice() {
   } else if ($persistentStore.read("timecardpushed") == tlist[nowlist][1]) {
     //console.log("当日已通知");
   }
+}
+
 }
 $done({
 title:"节假日倒计时",
