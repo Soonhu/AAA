@@ -1,20 +1,5 @@
 #!name=签到
 #!desc=百度贴吧签到
-/*
-百度贴吧签到脚本
-
-脚本修改自: https://github.com/sazs34/TaskConfig
-兼容: QuantumultX, Surge4, Loon
-
-获取Cookie说明：
-打开百度贴吧App后(AppStore中国区, 非内部版)，点击"我的", 如通知成功获取cookie, 则可以使用此签到脚本.
-获取Cookie后, 请将Cookie脚本禁用并移除主机名，以免产生不必要的MITM.
-脚本将在每天上午9:00执行, 您可以修改执行时间。
-
-************************
-Surge 4.2.0+ 脚本配置:
-************************
-
 [Script]
 贴吧签到 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
-*/
+
