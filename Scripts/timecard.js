@@ -95,7 +95,7 @@ function color_now(num){
   }else if(num==0){
     return "#BBFFFF"
   }else{
-    return "#9aff9a"
+    return "#f6c970"
   }
 }
 
