@@ -87,22 +87,10 @@ function icon_now(num){
   }
 }
 
-function icon-color_now(num){
-  if(num<=7 && num>3 ){
-    return "#EE2C2C"
-  }else if(num<=3 && num>0){
-    return "#ADFF2F"
-  }else if(num==0){
-    return "#BBFFFF"
-  }else{
-    return "#e9bb1d"
-  }
-}
-
 $done({
 title:title_random(tnumcount(Number(nowlist))),
 icon:icon_now(tnumcount(Number(nowlist))),
-icon-color:icon-color_now(tnumcount(Number(nowlist))),
+"icon-color":#ae7000
 content:tlist[nowlist][0]+":"+today(tnumcount(nowlist))+"天,"+tlist[Number(nowlist) + Number(1)][0] +":"+ tnumcount(Number(nowlist) + Number(1))+ "天,"+tlist[Number(nowlist) + Number(2)][0]+":"+tnumcount(Number(nowlist) + Number(2))+"天"
 })
 
