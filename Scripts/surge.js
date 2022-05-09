@@ -18,8 +18,8 @@ if ($trigger == "button") {
 $done({
     title:"Surge  已运行"+startTime,
     content:"Mitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
-    icon: icon_s?"cursorarrow.rays":"exclamationmark.triangle",
-   "icon-color":icon_s?"#7F00FF":"#FF7500"
+    icon: icon_s?"power.circle":"exclamationmark.triangle",
+   "icon-color":icon_s?"#DC143C":"#FF7500"
 });
 })();
 function icon_status(status){
