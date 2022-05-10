@@ -90,7 +90,7 @@ function icon_now(num){
 $done({
 title:title_random(tnumcount(Number(nowlist))),
 icon:icon_now(tnumcount(Number(nowlist))),
-"icon-color":"00FF00",
+"icon-color":"#E94335",
 content:tlist[nowlist][0]+":"+today(tnumcount(nowlist))+"天,"+tlist[Number(nowlist) + Number(1)][0] +":"+ tnumcount(Number(nowlist) + Number(1))+ "天,"+tlist[Number(nowlist) + Number(2)][0]+":"+tnumcount(Number(nowlist) + Number(2))+"天"
 })
 
