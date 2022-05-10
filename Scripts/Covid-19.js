@@ -1,24 +1,25 @@
-var list = ["中国","安阳","大理","上海"];
+var list = ["安阳","大理","上海"];
 const url = "https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5";
 var ala="";
-function nowtime(){
- let now = new Date();
- let time = now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
- return time
-}
+var num1="";
+var num2="";
+var num11="";
+var num22="";
 function num(location, result) {
   var loc = location;
   var resu = result;
-  var loc_new = new RegExp(loc + "[\\s\\S]*?confirm[\\s\\S]{3}(\\d+)");
-  var loc_now = new RegExp(loc + "[\\s\\S]*?nowConfirm[\\s\\S]{3}(\\d+)");
-  let loc_new_res = loc_new.exec(resu);
-  let loc_now_res = loc_now.exec(resu);
-  if (loc_new_res) {
-    //console.log("已获取" + loc + "的信息");
-    ala = ala +loc +"   :   " +loc_new_res[1].padStart(5,"\u0020")+":"+loc_now_res[1].padStart(5,"\u0020")+ "\n";
+  var loc_newcf = new RegExp(loc + "[\\s\\S]*?confirm[\\s\\S]{3}(\\d+)");
+  var loc_wzz = new RegExp(loc + "[\\s\\S]*?wzz_add[\\s\\S]{3}(\\d+)");
+  let loc_newcf_res = loc_newcf.exec(resu);
+  let loc_wzz_res = loc_wzz.exec(resu);
+  if (loc_newcf_res) {
+  num1=loc_newcf_res[1].padStart(6,"\u0020");
+  num2=loc_wzz_res[1].padStart(6,"\u0020");
+    num11=num1.replace(/\s/g, "");
+    num22=num2.replace(/\s/g, "");
+    ala = ala +loc +"：确诊"+num11.padStart(num11.length,"\u0020")+"例，无症状"+num22.padStart(num22.length,"\u0020")+ "例\n";
   } else {
-    //console.log("获取" + loc + "的信息失败");
-    ala = ala + loc + "   :   查无数据\n";
+    ala = ala + loc + "：无数据\n";
   }
 };
 $httpClient.get(url, function(error, response, data){
@@ -27,10 +28,10 @@ $httpClient.get(url, function(error, response, data){
     num(list[i], res);
     if (i == list.length - 1) {
      $done({
-       title: "疫情查询:新增|现存"+ "   "+nowtime(),
-       icon:"doc.text.magnifyingglass",
-       "icon-color":"#5AC8FA",
-       content: ala.replace(/\n$/, "")
+       title: "COVID-19",
+       icon:"heart.text.square",
+       "icon-color":"#E94335",
+       content: ala.replace(/\n$/, "").replace("确诊0例", "无").replace("无症状0例", "无").replace("无，无", "无")
      });
     }
   }
