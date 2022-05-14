@@ -30,7 +30,7 @@ $httpClient.get(url, function(error, response, data){
      $done({
        title: "COVID-19",
        icon:"heart.text.square",
-       "icon-color":"#E94335",
+       "icon-color":"#FF2D55",
        content: ala.replace(/\n$/, "").replace("确诊0例", "无").replace("无症状0例", "无").replace("无，无", "无")
      });
     }
