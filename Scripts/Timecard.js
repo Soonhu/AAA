@@ -1,13 +1,12 @@
 var tlist = {
-  1: ["清明", "2022-04-05"],
-  2: ["劳动", "2022-05-01"],
-  3: ["端午", "2022-06-03"],
-  4: ["中秋", "2022-09-10"],
-  5: ["国庆", "2022-10-01"],
-  6: ["元旦", "2023-01-01"],
-  7: ["春节", "2023-01-22"],
-  8: ["元宵", "2023-02-05"],
-  9: ["清明", "2023-04-05"]
+  1: ["端午", "2022-06-03"],
+  2: ["中秋", "2022-09-10"],
+  3: ["国庆", "2022-10-01"],
+  4: ["元旦", "2023-01-01"],
+  5: ["春节", "2023-01-22"],
+  6: ["元宵", "2023-02-05"],
+  7: ["清明", "2023-04-05"],
+  8: ["劳动", "2023-05-01"]
   
 };
 let tnow = new Date();
@@ -73,19 +72,20 @@ function datenotice() {
 //>图标依次切换乌龟、兔子、闹钟、礼品盒
 function icon_now(num){
   if(num<=7 && num>3 ){
-    return "hare"
+    return "tortoise"
   }else if(num<=3 && num>0){
     return "timer"
   }else if(num==0){
     return "gift"
   }else{
-    return "tortoise"
+    return "hourglass"
   }
 }
 
 $done({
 title:title_random(tnumcount(Number(nowlist))),
 icon:icon_now(tnumcount(Number(nowlist))),
+"icon-color":"#FF2D55",
 content:tlist[nowlist][0]+":"+today(tnumcount(nowlist))+"天,"+tlist[Number(nowlist) + Number(1)][0] +":"+ tnumcount(Number(nowlist) + Number(1))+ "天,"+tlist[Number(nowlist) + Number(2)][0]+":"+tnumcount(Number(nowlist) + Number(2))+"天"
 })
 
