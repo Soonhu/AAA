@@ -83,7 +83,7 @@ function icon_now(num){
   }else if(num==0){
     return "gift"
   }else{
-    return "hourglass"
+    return "clock"
   }
 }
 
