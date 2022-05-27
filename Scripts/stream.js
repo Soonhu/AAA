@@ -40,9 +40,9 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
-        disney_result="迪士尼➺未解锁"
+        disney_result="迪士尼➟未解锁"
       } else if (status==STATUS_TIMEOUT) {
-        disney_result="迪士尼➺检测超时"
+        disney_result="迪士尼➟检测超时"
       }
 result.push(disney_result)
 console.log(result)
@@ -88,7 +88,7 @@ panel_result['content'] = content
       })
     }
   
-    let youtube_check_result = '油管➺'
+    let youtube_check_result = '油管➟'
   
     await inner_check()
       .then((code) => {
@@ -144,7 +144,7 @@ panel_result['content'] = content
       })
     }
   
-    let netflix_check_result = '奈飞➺'
+    let netflix_check_result = '奈飞➟'
   
     await inner_check(81215567)
       .then((code) => {
