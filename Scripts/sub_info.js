@@ -51,8 +51,10 @@ let args = getArgs();
   let now = new Date();
   let hour = now.getHours();
   let minutes = now.getMinutes();
+  let seconds = now.gerSeconds();
   hour = hour > 9 ? hour : "0" + hour;
   minutes = minutes > 9 ? minutes : "0" + minutes;
+  seconds = seconds > 9 ? seconds : "0" + seconds;
 
   $done({
     title: `${args.title} | ${hour}:${minutes}`,
