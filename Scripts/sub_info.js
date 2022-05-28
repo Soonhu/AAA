@@ -57,7 +57,7 @@ let args = getArgs();
   seconds = seconds > 9 ? seconds : "0" + seconds;
 
   $done({
-    title: `${args.title} | ${hour}:${minutes}`,
+    title: `${args.title} | ${hour}:${minutes}: ${seconds} `,
     content: content.join("\n"),
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
