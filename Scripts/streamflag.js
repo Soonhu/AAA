@@ -37,7 +37,7 @@ var flags = new Map([[ "AC" , "🇦🇨" ] ,["AE","🇦🇪"], [ "AF" , "🇦�
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="迪士尼➟"+flags.get(code.toUpperCase())
+        disney_result="迪士尼➟"+flags.get(region.toUpperCase())
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
